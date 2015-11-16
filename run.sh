@@ -8,6 +8,10 @@
 . ./path.sh
 
 inputfile=$1
+
+[ ! -f $inputfile ] && echo "[error] run.sh: no such file $inputfile" && exit 1;
+
+# path settings
 proc_dir=tmp-data
 proc_list=$proc_dir/lists
 fbank_dir=$proc_dir/data-fbank
