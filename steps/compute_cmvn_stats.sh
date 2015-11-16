@@ -2,11 +2,12 @@
 
 if [ -f path.sh ]; then . ./path.sh; fi
 
-data=$1
-logdir=$2
-cmvndir=$3
+fbankscp=$1
+fname=$2
+logdir=$3
+cmvndir=$4
 
-! compute-cmvn-stats scp:$data/fbank_pitch.scp ark,scp,t:$cmvndir/cmvn.ark,$cmvndir/cmvn.scp \
-    2> $logdir/cmvn.log && echo "Error computing CMVN stats" && exit 1;
+! compute-cmvn-stats scp:$fbankscp ark,scp,t:$cmvndir/${fname}_cmvn.ark,$cmvndir/${fname}_cmvn.scp \
+    2> $logdir/${fname}_cmvn.log && echo "Error computing CMVN stats" && exit 1;
 
-echo "Succeeded creating CMVN stats for $data/fbank_pitch.scp"
+echo "Succeeded creating CMVN stats for $fbankscp"

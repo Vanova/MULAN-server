@@ -1,0 +1,2 @@
+compute-cmvn-stats scp:tmp-data/data-fbank/GEcall-109-G.story-bt.scp ark,scp,t:tmp-data/data-fbank/GEcall-109-G.story-bt_cmvn.ark,tmp-data/data-fbank/GEcall-109-G.story-bt_cmvn.scp 
+LOG (compute-cmvn-stats:main():compute-cmvn-stats.cc:171) Done accumulating CMVN stats for 1 utterances; 0 had errors.
